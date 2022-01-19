@@ -1,4 +1,5 @@
 # Converges approximately to the book example
+# Using one-step policy update or TD(0)
 
 import numpy as np
 import random
