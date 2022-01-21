@@ -13,3 +13,6 @@ Also incase someone wants to contribute additional code(or better code) are welc
 
 ## Usage
 Other than OpenAI and Keras, other files should work on all versions of python. But Keras and OpenAI(owing to the use of tensorflow) require <=Python 3.8
+
+## Updates
+- TODO: Exercise 5.12: Designing the Racetrack is tedious so I am skipping this for now, but nonetheless this is a very interesting question(as we can create multiple tracks and a visualizer) and I shall attempt it at last
