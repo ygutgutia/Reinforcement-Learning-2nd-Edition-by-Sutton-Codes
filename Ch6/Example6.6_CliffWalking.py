@@ -30,10 +30,10 @@ class CliffWalking_sarsa:
             print("Iteration Done : " + str(i) + " Reward Gained = "+ str(self.curr_total_reward))
     
     def find_optimal_action(self, currx, curry):
-            curr_actions = self.action_value[currx][curry]
-            max_actions = max(curr_actions)
-            action = random.choice([i for i in range(len(curr_actions)) if curr_actions[i] == max_actions])
-            return action
+        curr_actions = self.action_value[currx][curry]
+        max_actions = max(curr_actions)
+        action = random.choice([i for i in range(len(curr_actions)) if curr_actions[i] == max_actions])
+        return action
 
     def find_action(self, currx, curry):        
         exploration_prob = np.random.uniform()
@@ -105,7 +105,7 @@ class CliffWalking_ql:
         self.cliff_height = cliff_height # maxy size array
         self.action_value = np.zeros(shape=(maxx, maxy, self.possible_actions))
 
-    def sarsa(self):
+    def ql(self):
         self.curr_total_reward = 0
         self.iter_curr = 0
         for i in range(self.iters):
@@ -113,10 +113,10 @@ class CliffWalking_ql:
             print("Iteration Done : " + str(i) + " Reward Gained = "+ str(self.curr_total_reward))
     
     def find_optimal_action(self, currx, curry):
-            curr_actions = self.action_value[currx][curry]
-            max_actions = max(curr_actions)
-            action = random.choice([i for i in range(len(curr_actions)) if curr_actions[i] == max_actions])
-            return action
+        curr_actions = self.action_value[currx][curry]
+        max_actions = max(curr_actions)
+        action = random.choice([i for i in range(len(curr_actions)) if curr_actions[i] == max_actions])
+        return action
 
     def find_action(self, currx, curry):        
         exploration_prob = np.random.uniform()
@@ -187,7 +187,7 @@ def main():
     obj.sarsa()
     obj.print_policy()
     objql = CliffWalking_ql(10, 100, 5, 1, 0.1, 0.1, 400)
-    objql.sarsa()
+    objql.ql()
     objql.print_policy()
     plot_graph([[obj.episode_reward, 'red', 'sarsa'], [objql.episode_reward, 'blue', 'q-learning']])
 

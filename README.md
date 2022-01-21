@@ -16,3 +16,4 @@ Other than OpenAI and Keras, other files should work on all versions of python. 
 
 ## Updates
 - TODO: Exercise 5.12: Designing the Racetrack is tedious so I am skipping this for now, but nonetheless this is a very interesting question(as we can create multiple tracks and a visualizer) and I shall attempt it at last
+- Exercise 7.2 is more of an empirical question rather than a programming question, hence is skipped.
