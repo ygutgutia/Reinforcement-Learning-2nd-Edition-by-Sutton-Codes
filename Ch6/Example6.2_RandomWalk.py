@@ -22,15 +22,14 @@ class TD:
         plot_graph("TD Learning", self.max_state)
 
     def expected_reward(self, curr_state):
-        if curr_state == self.end_state[0]:
-            return
-        if curr_state == self.end_state[1]:
+        if curr_state in self.end_state:
             return
         prob = np.random.uniform()
-        reward = 1 if(curr_state+1 == self.end_state[1] and prob < 0.5) else 0
-        new_state_value = self.state_value[curr_state+1] if prob < 0.5 else self.state_value[curr_state-1]
+        next_state = curr_state+1 if prob < 0.5 else curr_state-1
+        reward = 1 if next_state == self.end_state[1] else 0
+        new_state_value = self.state_value[next_state]
         self.state_value[curr_state] += self.step_size * (reward + self.disc_factor * new_state_value - self.state_value[curr_state])
-        self.expected_reward(curr_state+1) if prob < 0.5 else self.expected_reward(curr_state-1)
+        self.expected_reward(next_state)
         return
 
 

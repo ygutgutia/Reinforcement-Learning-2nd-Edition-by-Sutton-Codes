@@ -3,6 +3,8 @@
 ### Motivation
 Detailed Solutions for each chapter an be found at [Link](https://github.com/LyWangPX/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions) - an excellent solution guide to help self-learners.
 
+Just Found out such a repo exists already - [Link Attached for reference](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction)
+
 The aim of this repository is to collate some working codes hich shall be helpful in visualising the text.
 Some codes are written by me, others might be obtained from the internet, the source of which shall be referenced at the top of each code.
 
